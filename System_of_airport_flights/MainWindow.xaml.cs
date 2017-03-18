@@ -22,7 +22,7 @@ namespace System_of_airport_flights
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }
