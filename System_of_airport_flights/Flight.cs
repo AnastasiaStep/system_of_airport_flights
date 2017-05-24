@@ -12,12 +12,12 @@ namespace System_of_airport_flights
 
         static public List<Flight> flights = new List<Flight>();
 
-        private DateTime date_time;
+        private DateTime dateTime;
 
-        public DateTime Date_time
+        public DateTime DateTime
         {
-            get { return date_time ; }
-            set { date_time = value; }
+            get { return dateTime ; }
+            set { dateTime = value; }
         }
         private string number;
 
@@ -56,10 +56,10 @@ namespace System_of_airport_flights
             get { return status; }
             set { status = value; }
         }
-        public Flight(DateTime date_time, string number, string airline, string cityOfArrival, string terminal, string status)
+        public Flight(DateTime dateTime, string number, string airline, string cityOfArrival, string terminal, string status)
         {
 
-            this.date_time = date_time;
+            this.dateTime = dateTime;
             this.number = number;
             this.airline = airline;
             this.cityOfArrival = cityOfArrival;
@@ -71,7 +71,7 @@ namespace System_of_airport_flights
         public Flight() { }
         public string ShowFlightCharacters()
         {
-            return this.date_time + " " + this.number + " " + this.airline + " " + this.cityOfArrival + " " + this.terminal + " " + this.status;
+            return this.dateTime + " " + this.number + " " + this.airline + " " + this.cityOfArrival + " " + this.terminal + " " + this.status;
         }
 
         static public void GetFlight(string path)
