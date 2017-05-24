@@ -1,0 +1,63 @@
+﻿<Page x:Class="System_of_airport_flights.MainAdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:System_of_airport_flights"
+      mc:Ignorable="d" 
+      d:DesignHeight="200" d:DesignWidth="450"
+      Title="MainAdminPage">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <ListView Grid.Row="0" Name="listView">
+
+            <ListView.View>
+                
+                <GridView>
+                    <GridViewColumn Header="Дата и время" DisplayMemberBinding="{Binding Date_time}" />
+                    <GridViewColumn Header="Авиакомпания" DisplayMemberBinding="{Binding Airline}" />
+                    <GridViewColumn Header="Город прибытия" DisplayMemberBinding="{Binding CityOfArrival}" />
+                    <GridViewColumn Header="Терминал" DisplayMemberBinding="{Binding Terminal}" />
+                    <GridViewColumn Header="Статус" DisplayMemberBinding="{Binding Status}" />
+                </GridView>
+                
+            </ListView.View>
+
+        </ListView>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="add" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                Добавить
+            </Button>
+            <Button Grid.Column="1" x:Name="delete" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                Удалить
+            </Button>
+            <Button Grid.Column="2" x:Name="upload" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                Загрузить
+            </Button>
+            <Button Grid.Column="3" x:Name="download" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                Выгрузить
+            </Button>
+            <Button Grid.Column="4" x:Name="search" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                Поиск
+            </Button>
+
+        </Grid>
+        
+    </Grid>
+</Page>

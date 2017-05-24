@@ -1,0 +1,73 @@
+﻿<Page x:Class="System_of_airport_flights.AdminPage1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:System_of_airport_flights"
+      mc:Ignorable="d" 
+      d:DesignHeight="200" d:DesignWidth="450"
+      Title="AdminPage1">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">
+                Логин
+            </Label>
+
+            <TextBox x:Name="login" Grid.Row="1" Height="20" Width="90">
+                
+            </TextBox>
+            
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">
+                Пароль
+            </Label>
+
+            <PasswordBox x:Name="passsword" Grid.Row="1" Height="20" Width="90">
+               
+            </PasswordBox>
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="loginButton" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="loginButton_Click">
+                Вход
+            </Button>
+
+            <Button x:Name="signupButton" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="signupButton_Click">
+                Регистрация
+            </Button>
+            
+        </Grid>
+        
+    </Grid>
+</Page>
