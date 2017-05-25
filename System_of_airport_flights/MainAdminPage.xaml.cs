@@ -64,12 +64,18 @@ namespace System_of_airport_flights
         MessageBox.Show("Выберите нужный рейс для удаления!");
                    
         }
+            try
+            {
 
-            string[] data = File.ReadAllLines(doc);
 
-            File.WriteAllLines(doc, File.ReadLines(doc).Where(l => l != data[i]).ToList());
+                string[] data = File.ReadAllLines(doc);
 
-            listView.Items.Refresh();
+                File.WriteAllLines(doc, File.ReadLines(doc).Where(l => l != data[i]).ToList());
+
+                listView.Items.Refresh();
+            }
+            catch {
+            }
             
         }
 
