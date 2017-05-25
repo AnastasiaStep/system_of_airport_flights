@@ -38,10 +38,10 @@ namespace System_of_airport_flights
 
         }
 
-        static public void GetLoginPass(string path)
+        static public void GetLoginPass(string doc)
         {
 
-            string[] data = File.ReadAllLines(path);
+            string[] data = File.ReadAllLines(doc);
 
             if (data.Length == 0)
             {
@@ -60,7 +60,7 @@ namespace System_of_airport_flights
 
         }
 
-        static public bool CheckIfCorrect(string login, string password)
+        static public bool CheckAndCorrect(string login, string password)
         {
 
             if (admin.Count == 0) { return false; }

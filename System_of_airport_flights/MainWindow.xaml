@@ -5,40 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_of_airport_flights"
         mc:Ignorable="d"
-        Title="Приветствие" ResizeMode="NoResize" Height="350" Width="525">
+        Title="Начальная страница" ResizeMode="NoResize" Height="350" Width="525">
+
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/13028_20120904_1897249784.jpg"/>
+        </Grid.Background>
+
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="190"/>
-            <RowDefinition/>
-            <RowDefinition Height="60" />
+            <RowDefinition Height="321"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="0" />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30">
-            
-            Здравствуйте!
-            
-        </TextBlock>
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" FontSize="35" Margin="83,19,97,256" Height="46" FontFamily="Times New Roman" FontStyle="Italic" FontWeight="Bold" Foreground="White"><Run Text="  "/><Run Text="Добро пожаловать!"/></TextBlock>
 
-        <Grid Grid.Row="1">
+        <Grid Margin="0,102,169,0">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="29*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="82"/>
+                <ColumnDefinition Width="39*"/>
                 <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="adminButton" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="130" Height="60" Click="adminButton_Click">
-                Администрирование
-            </Button>
 
-            <Button Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="130" Height="60">
+            <Button x:Name="adminButton" VerticalAlignment="Top" Height="60" Click="adminButton_Click" Grid.ColumnSpan="3" Margin="9,78,0,0" Background="#FF133D7A" FontSize="16" Foreground="White" Content="Администратор"/>
+
+            <Button x:Name="lookButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="170" Height="60" Click="lookButton_Click" Margin="0,0,81,10" Grid.ColumnSpan="4" Background="#FF133D7A" Foreground="White" FontSize="16">
                 Просмотр рейсов
             </Button>
-            
+
+
         </Grid>
-        
+
+
     </Grid>
 </Window>

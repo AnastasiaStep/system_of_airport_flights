@@ -31,7 +31,7 @@ namespace System_of_airport_flights
             if (Admin.registered)
             {
 
-                MessageBox.Show("Первичная регистрация проведена!");
+                MessageBox.Show("Первичная регистрация уже проведена!");
 
             }
             else
@@ -49,7 +49,7 @@ namespace System_of_airport_flights
             string login = this.login.Text;
             string password = this.passsword.Password;
 
-            if (Admin.CheckIfCorrect(login, password))
+            if (Admin.CheckAndCorrect(login, password))
             {
 
                 NavigationService.Navigate(new MainAdminPage());

@@ -22,7 +22,7 @@ namespace System_of_airport_flights
     public partial class MainWindow : Window
     {
 
-        private string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\AirPortTemp";
+        private string doc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\AirPortTemp";
         private string adm = @"\admin.txt";
         private string data = @"\data.txt";
 
@@ -30,31 +30,31 @@ namespace System_of_airport_flights
         {
             InitializeComponent();
 
-            Directory.CreateDirectory(path);
+            Directory.CreateDirectory(doc);
 
-            if (!File.Exists(path + adm))
+            if (!File.Exists(doc + adm))
             {
 
-                using (FileStream fs = File.Create(path + adm))
+                using (FileStream fs = File.Create(doc + adm))
                 {
                     
                 }
 
             }
 
-            if (!File.Exists(path + data))
+            if (!File.Exists(doc + data))
             {
 
-                using (FileStream fs = File.Create(path + data))
+                using (FileStream fs = File.Create(doc + data))
                 {
 
                 }
 
             }
 
-            Flight.GetFlight(path + data);
+            Flight.GetFlight(doc + data);
 
-            Admin.GetLoginPass(path + adm);
+            Admin.GetLoginPass(doc + adm);
             
         }
 
@@ -66,6 +66,15 @@ namespace System_of_airport_flights
             admin.Show();
 
             
+
+        }
+
+        private void lookButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            var win = new UserWindow();
+            this.Close();
+            win.Show();
 
         }
     }

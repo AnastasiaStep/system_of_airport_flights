@@ -22,7 +22,7 @@ namespace System_of_airport_flights
     public partial class AdminSignUp : Page
     {
 
-        private string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\AirPortTemp\admin.txt";
+        private string doc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\AirPortTemp\admin.txt";
 
         public AdminSignUp()
         {
@@ -44,7 +44,7 @@ namespace System_of_airport_flights
             string login = this.login.Text;
             string password = this.password.Password;
 
-            using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
+            using (StreamWriter sw = new StreamWriter(doc, false, System.Text.Encoding.Default))
             {
 
                 sw.WriteLine(login);

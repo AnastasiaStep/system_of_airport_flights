@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Администрирование" ResizeMode="NoResize" Height="350" Width="525">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/82504436_Utrennee_i_vechernee_nebo__foto_Eric_Cahan_05__Montok_shtat_NyuYork_20_41_.jpg"/>
+        </Grid.Background>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -14,13 +17,13 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Grid.Row="0" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Italic" Foreground="White" FontFamily="Times New Roman">
             Расписание рейсов
         </TextBlock>
 
         <Frame x:Name="adminFrame" Grid.Row="1" Height="200" Width="450" NavigationUIVisibility="Hidden"/>
 
-        <Button x:Name="goMainButton" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="130" Height="30" Click="goMainButton_Click">
+        <Button x:Name="goMainButton" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="130" Height="30" Click="goMainButton_Click" FontSize="16" Foreground="White" Background="#FF748DB2">
             На главную
         </Button>
 

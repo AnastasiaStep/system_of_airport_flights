@@ -15,49 +15,45 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <ListView Grid.Row="0" Name="listView">
+        <ListView Grid.Row="0" Name="listView" Margin="0,-5,0,5" SelectionChanged="listView_SelectionChanged">
 
             <ListView.View>
-                
+
                 <GridView>
                     <GridViewColumn Header="Дата и время" DisplayMemberBinding="{Binding Date_time}" />
+                    <GridViewColumn Header="Номер рейса" DisplayMemberBinding="{Binding Number}" />
                     <GridViewColumn Header="Авиакомпания" DisplayMemberBinding="{Binding Airline}" />
                     <GridViewColumn Header="Город прибытия" DisplayMemberBinding="{Binding CityOfArrival}" />
                     <GridViewColumn Header="Терминал" DisplayMemberBinding="{Binding Terminal}" />
                     <GridViewColumn Header="Статус" DisplayMemberBinding="{Binding Status}" />
                 </GridView>
-                
+
             </ListView.View>
 
         </ListView>
 
         <Grid Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/82504436_Utrennee_i_vechernee_nebo__foto_Eric_Cahan_05__Montok_shtat_NyuYork_20_41_.jpg"/>
+            </Grid.Background>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="add" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <Button x:Name="add" Width="68" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Click="add_Click" Background="#FF748DB2" FontSize="13" Margin="43,10,39,10" Foreground="White" >
                 Добавить
             </Button>
-            <Button Grid.Column="1" x:Name="delete" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <Button Grid.Column="1" x:Name="delete" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Click="delete_Click" Background="#FF748DB2" FontSize="14" Foreground="White" >
                 Удалить
             </Button>
-            <Button Grid.Column="2" x:Name="upload" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
-                Загрузить
-            </Button>
-            <Button Grid.Column="3" x:Name="download" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
-                Выгрузить
-            </Button>
-            <Button Grid.Column="4" x:Name="search" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <Button Grid.Column="2" x:Name="search" Width="64" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Click="search_Click" Background="#FF748DB2" Foreground="White" FontSize="14" >
                 Поиск
             </Button>
 
         </Grid>
-        
+
     </Grid>
 </Page>

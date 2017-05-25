@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:System_of_airport_flights"
       mc:Ignorable="d" 
       d:DesignHeight="200" d:DesignWidth="450"
-      Title="AdminSignUp">
+      Title="Авторизация администратора">
 
     <Grid>
 
@@ -27,7 +27,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Foreground="White">
                 Имя
             </Label>
 
@@ -35,7 +35,7 @@
 
             </TextBox>
 
-            <Label Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">
+            <Label Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Foreground="White">
                 Фамилия
             </Label>
 
@@ -56,7 +56,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">
+            <Label Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Foreground="White">
                 Логин
             </Label>
 
@@ -64,7 +64,7 @@
 
             </TextBox>
             
-            <Label Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">
+            <Label Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Foreground="White">
                 Пароль
             </Label>
 
@@ -83,11 +83,11 @@
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="goBackButton" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="goBackButton_Click">
+            <Button x:Name="goBackButton" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="goBackButton_Click" Background="#FF748DB2" Foreground="White" FontSize="14">
                 Назад
             </Button>
 
-            <Button x:Name="signupButton" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="signupButton_Click">
+            <Button x:Name="signupButton" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="signupButton_Click" FontSize="14" Foreground="White" Background="#FF748DB2">
                 Регистрация
             </Button>
 
